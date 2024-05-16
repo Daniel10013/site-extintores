@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins-regular", monospace;
+}
+
+@font-face {
+    font-family: "Poppins-regular";
+    src: url("../font/Poppins/Poppins-Regular.ttf");
+    font-weight: 400;
+}
+
+h1{
+    border: solid 1px red;
+}
