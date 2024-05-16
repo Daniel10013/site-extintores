@@ -1,3 +1,3 @@
 <?php
 
-var_dump($_GET);
+header("Content-type:text/html; charset=utf8");
