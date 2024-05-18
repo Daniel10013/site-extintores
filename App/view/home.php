@@ -7,6 +7,17 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Home</h1>
+    <nav class="navbar">
+        <div class="logo">Logo</div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Sobre Nós</a></li>
+            <li><a href="#">Produtos</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+        <div class="whatsapp">
+            <a href="#">whatsapp</a>
+        </div>
+    </nav>
 </body>
 </html>
