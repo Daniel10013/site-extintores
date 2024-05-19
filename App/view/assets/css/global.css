@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,4 +9,55 @@
     font-family: "Poppins-regular";
     src: url("../font/Poppins/Poppins-Regular.ttf");
     font-weight: 400;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: solid 1px blue;
+    padding: 5px;
+
+    & .logolist {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 20px;
+    }
+
+    & .logo {
+        
+    }
+
+    & .logo img {
+        height: 65px;
+    }
+
+    & ul {
+        list-style: none;
+        display: flex;
+        gap: 15px;
+    }
+
+    & a {
+        text-decoration: none;
+    }
+
+    & .whatsapp {
+        border: solid 1px #25A722;
+        display: flex;
+        background-color: #25A722;
+        border-radius: 35px;
+        padding: 1px 10px 1px 10px;
+    }
+
+    & .whatsapp img {
+        width: 40px;
+    }
+
+    & .whatsapp a {
+        padding: 10px;
+        color: white;
+        font-size: 20px;
+    }
 }
