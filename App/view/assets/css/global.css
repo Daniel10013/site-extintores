@@ -10,3 +10,9 @@
     src: url("../font/Poppins/Poppins-Regular.ttf");
     font-weight: 400;
 }
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
