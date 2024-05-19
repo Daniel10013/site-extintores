@@ -2,17 +2,25 @@
 
 namespace App\Controller;
 
-use App\Model\Emails;
+use Exception;
+use App\Controller\Controller;
 
-class Contact{
+class Contact extends Controller{
 
     public function sendEmail($messageData){
-        var_dump($messageData);
-    }
-
-    private function messageDataIsValid($messageData){
-        //todo Terminar validacao dos dados;
-        return true;
+        try{
+            $response = $this->business->sendEmail($messageData);
+            return [
+                "message" => $response["mensagem"],
+                "status" => $response["status"]
+            ];
+        }
+        catch(Exception $error){
+            return [
+                "message" => $error->getmessage(),
+                "status" => false
+            ];
+        }
     }
 
     public function getEmails(){
