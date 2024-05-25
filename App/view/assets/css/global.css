@@ -2,11 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins-regular", monospace;
+    font-family: "Poppins", monospace;
 }
 
 @font-face {
-    font-family: "Poppins-regular";
+    font-family: "Poppins";
     src: url("../font/Poppins/Poppins-Regular.ttf");
     font-weight: 400;
 }

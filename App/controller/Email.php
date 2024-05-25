@@ -5,7 +5,7 @@ namespace App\Controller;
 use Exception;
 use App\Controller\Controller;
 
-class Contact extends Controller{
+class Email extends Controller{
 
     public function sendEmail(array $messageData): array{
         try{

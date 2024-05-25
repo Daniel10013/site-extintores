@@ -1,12 +1,12 @@
 <?php
 
-use App\Controller\Contact;
+use App\Controller\Email;
 use App\Lib\Recaptcha\Recaptcha;
 
 
 $result = "";
 if(isset($_POST["send-mail"])){
-    $contactController = new Contact();
+    $contactController = new Email();
     $result = $contactController->sendEmail($_POST);
 }
 

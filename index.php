@@ -12,5 +12,5 @@ if(array_key_exists($requestedRoute, $routes)){
     require_once "App/view/" . $routes[$requestedRoute] . ".php";
 }
 else{
-    require_once "Ap/view/404.php";
+    require_once "App/view/404.php";
 }

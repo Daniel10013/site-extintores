@@ -38,13 +38,12 @@ class Model{
 
     protected function sendData(string $query, array $dataToSend): bool{
         $bindedQuery = $this->getBindedQuery($query, $dataToSend);
-        
         $queryResult = $this->connection->query($bindedQuery);
         if($queryResult == false){
             Logger::saveLog($this->connection->error);
             return false;
         }
-        return true;
+        return true;    
     }
 
     private function getBindedQuery(string $query, array $data):string {
@@ -64,8 +63,17 @@ class Model{
         return $datToEscape;
     }
 
-    protected function getData(){
+    protected function getData(string $query, array $queryParams): array{
+        $bindedQuery = $this->getBindedQuery($query, $queryParams);
+        $queryResult = $this->connection->query($bindedQuery);
+        var_dump($queryResult);die;
+        $databaseData = [];
+        if($queryResult == false){
+            Logger::saveLog($this->connection->error);
+            throw new Exception("Erro ao pegar dados do banco de dados!");
+        }
         
+        return $databaseData;
     }
 
     protected function getById(int $id): array{

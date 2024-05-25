@@ -7,7 +7,7 @@ use App\Lib\Mail\Mailer;
 use App\Model\Emails;
 use Exception;
 
-class Contact{
+class Email{
 
     public function sendEmail(array $postData): array{
         $this->validateRecaptcha($postData);
@@ -86,9 +86,12 @@ class Contact{
     }
 
     private function sendEmailWithMailer(array $messageData):bool {
-        //todo: implementar envio de email com a Lib/Mail/Mailer.php
+        // $mailer = new Mailer($messageData);
+        // return $mailer->sendEmail();
         return true;
+        //todo: implementar envio de email com a Lib/Mail/Mailer.php
     }
+
 
     public function getEmails(){
 
