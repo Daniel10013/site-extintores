@@ -10,7 +10,7 @@
 
 <body>
 
-    <nav class="navbar">
+<header>
         <div class="logolist">
             <div class="logo"><img src="<?= ASSETS_DIR ?>img/logo.svg" alt="Logo Apaga Extintores"></div>
             <ul class="listlink">
@@ -24,7 +24,7 @@
             <img src="<?= ASSETS_DIR ?>img/whatsapp_logo.svg" alt="Whatsapp Logo">
             <a href="#">31 99305-1820</a>
         </div>
-    </nav>
+    </header>
 
 </body>
 

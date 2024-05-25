@@ -15,7 +15,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: solid 1px red;
+    /* border: solid 1px red; */
     padding: 5px;
 
     & .logolist {
@@ -64,11 +64,59 @@ header {
     }
 }
 
+
+main {
+    .banner img{
+        width: 100%;
+    }
+
+    .title h1{
+        display: flex;
+        justify-content: center;
+    }
+
+    .information {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #DBDBDB;
+        border: solid 1px blue;
+        padding: 5px;
+        gap: 15px;
+        text-align: justify;
+    }
+
+    .text p{
+        border: solid 1px pink;
+        width: 850px;
+        color: gray;
+        padding: 5px;
+        gap: 10px;
+        text-indent: 15px;
+    }
+
+    .text a{
+        border: solid 1px #AC0202;
+        display: flex;
+        background-color: #AC0202;
+        border-radius: 35px;
+        width: 370px;
+        padding: 1px 10px 1px 10px;
+        color: white;
+        text-decoration: none;
+    }
+
+    .information img{
+        width: 550px;
+    }
+}
+
+
 footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: solid 1px green;
+    /* border: solid 1px green; */
     height: 125px;
     padding: 5px;
     gap: 5px;
