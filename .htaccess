@@ -7,6 +7,7 @@
     AddOutputFilterByType DEFLATE application/javascript
     AddOutputFilterByType DEFLATE application/x-javascript
     AddOutputFilterByType DEFLATE image/svg+xml
+    AddOutputFilterByType DEFLATE image/svg
 </IfModule>
 
 <IfModule mod_rewrite.c>
