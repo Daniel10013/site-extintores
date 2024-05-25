@@ -12,7 +12,8 @@ class Emails extends Model{
         parent::__construct();
     }
 
-    public function sendContact(){
-
+    public function saveEmail(array $messageData): bool{
+        $query = "INSERT INTO {$this->table} VALUES (NULL, '?', '?', '?', '?', '?')";
+        return $this->sendData($query, $messageData);
     }
 }

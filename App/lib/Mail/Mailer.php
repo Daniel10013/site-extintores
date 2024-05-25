@@ -1,15 +1,20 @@
 <?php
 
+namespace App\Lib\Mail;
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
-
-require './PHPMailer/src/Exception.php';
-require './PHPMailer/src/PHPMailer.php';
-require './PHPMailer/src/SMTP.php';
+use PHPMailer\PHPMailer\SMTP;
 
 class Mailer{
 
-    public function sendEmail(){
+
+
+    public function setDataToSendEmail(array $messageData){
+
+    }
+
+    private function sendEmail(){
         $mail = new PHPMailer(true);
         try {
             //Server settings
@@ -24,8 +29,7 @@ class Mailer{
 
             //Recipients
             $mail->setFrom('from@example.com', 'Mailer');
-            $mail->addAddress('joe@example.net', 'Joe User');     //Add a recipient
-            $mail->addAddress('ellen@example.com');               //Name is optional
+            $mail->addAddress('joe@example.net', 'Joe User');     //Add a recipient  //Name is optional
             $mail->addReplyTo('info@example.com', 'Information');
             $mail->addCC('cc@example.com');
             $mail->addBCC('bcc@example.com');
