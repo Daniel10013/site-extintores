@@ -6,22 +6,24 @@ use Exception;
 
 class Recaptcha{
 
-    private static $site_key = "6LcpXuEpAAAAAC3Rx113zmWfOEx-HH6SylqUq3ZI";
-    private static $private_key = "6LcpXuEpAAAAANqqIrmO1WBnv1cz8yUeFVOFokx9";
+    private static string $site_key = "6LcpXuEpAAAAAC3Rx113zmWfOEx-HH6SylqUq3ZI";
+    private static string $private_key = "6LcpXuEpAAAAANqqIrmO1WBnv1cz8yUeFVOFokx9";
 
-    public static function getSiteKey(){
+    public static function getSiteKey(): string{
         return self::$site_key;
     }
 
-    public static function recatpchaIsValid($recaptchaResponse){
+    public static function recatpchaIsValid(string $recaptchaResponse):bool {
         $requestResponse = self::sendRecaptchaValidationRequest($recaptchaResponse);
         
         if($requestResponse->success == false){
             throw new Exception("Resposta Recaptcha inválida!");
         }
+
+        return true;
     }
 
-    private static function sendRecaptchaValidationRequest($recaptchaResponse){
+    private static function sendRecaptchaValidationRequest(string $recaptchaResponse): object{
         $urlToRequest = 'https://www.google.com/recaptcha/api/siteverify';
 
         $data = array(

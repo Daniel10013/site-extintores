@@ -7,7 +7,7 @@ use App\Controller\Controller;
 
 class Contact extends Controller{
 
-    public function sendEmail($messageData){
+    public function sendEmail(array $messageData): array{
         try{
             $response = $this->business->sendEmail($messageData);
             return [
@@ -23,7 +23,11 @@ class Contact extends Controller{
         }
     }
 
-    public function getEmails(){
+    public function getAllEmails(){
 
     }
+
+    // public function getEmailById(int $id): array{
+    //     return [];
+    // }
 }
