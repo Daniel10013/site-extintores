@@ -11,11 +11,11 @@
     font-weight: 400;
 }
 
-.navbar {
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: solid 1px blue;
+    border: solid 1px red;
     padding: 5px;
 
     & .logolist {
@@ -37,6 +37,12 @@
 
     & a {
         text-decoration: none;
+        color: gray;
+    }
+
+    & a:hover{
+        color: red;
+        transition: 0.2s;
     }
 
     & .whatsapp {
@@ -60,10 +66,59 @@
 
 footer {
     display: flex;
+    justify-content: center;
+    align-items: center;
     border: solid 1px green;
+    height: 125px;
+    padding: 5px;
+    gap: 5px;
+
+    & .contactlist {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        position: absolute;
+        left: 0;
+    }
 
     & .logo img {
         height: 65px;
     }
 
+    & .bar {
+        border: solid 1px silver;
+        width: 525px;
+    }
+
+    & ul {
+        list-style: none;
+        gap: 45px;
+    }
+
+    & a {
+        text-decoration: none;
+        color: grey;
+    }
+
+    & .copyright {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 3px;
+        /* border: solid 1px yellow; */
+    }
+
+    & .copyright ul {
+        display: flex;
+    }
+
+    & p {
+        color: gray;
+    }
+
+    & .copyright a:hover{
+        color: red;
+        transition: 0.2s;
+    }
 }
