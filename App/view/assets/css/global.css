@@ -25,10 +25,6 @@
         gap: 20px;
     }
 
-    & .logo {
-        
-    }
-
     & .logo img {
         height: 65px;
     }
@@ -60,4 +56,14 @@
         color: white;
         font-size: 20px;
     }
+}
+
+footer {
+    display: flex;
+    border: solid 1px green;
+
+    & .logo img {
+        height: 65px;
+    }
+
 }

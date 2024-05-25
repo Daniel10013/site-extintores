@@ -9,9 +9,9 @@
 </head>
 
 <body>
-    <nav class="navbar">
+    <header class="navbar">
         <div class="logolist">
-            <div class="logo"><img src="<?= ASSETS_DIR?>img/logo.svg" alt="Logo Apaga Extintores"></div>
+            <div class="logo"><img src="<?= ASSETS_DIR ?>img/logo.svg" alt="Logo Apaga Extintores"></div>
             <ul class="listlink">
                 <li><a href="home">Home</a></li>
                 <li><a href="sobre-nos">Sobre Nós</a></li>
@@ -20,14 +20,14 @@
             </ul>
         </div>
         <div class="whatsapp">
-            <img src="<?= ASSETS_DIR?>img/whatsapp_logo.svg" alt="Whatsapp Logo">
+            <img src="<?= ASSETS_DIR ?>img/whatsapp_logo.svg" alt="Whatsapp Logo">
             <a href="#">31 99305-1820</a>
         </div>
-    </nav>
+    </header>
 
     <footer>
         <div class="rodape">
-            <div class="logo"><img src="<?= ASSETS_DIR?>img/logo.svg" alt="Logo Apaga Extintores"></div>
+            <div class="logo"><img src="<?= ASSETS_DIR ?>img/logo.svg" alt="Logo Apaga Extintores"></div>
         </div>
     </footer>
 
