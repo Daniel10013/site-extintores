@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?= ASSETS_DIR ?>css/global.css">
+    <link rel="stylesheet" href="<?= ASSETS_DIR?>css/home.css">
     <title>Document</title>
 </head>
 
@@ -50,7 +51,7 @@
         </div>
         <div class="products">
             <div><h1>Veja Nossos Produtos</h1></div>    
-            <div class="allproducts">
+            <div class="cards">
                 <div class="productslist">
                 <a href="#">Produto 1</a>
                 <a href="#">Produto 2</a>
