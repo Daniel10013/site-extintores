@@ -49,8 +49,16 @@
             </div>
         </div>
         <div class="products">
-            <div></div>
-            <div><a href="produtos">Conheça nossa linha de produtos</a></div>
+            <div><h1>Veja Nossos Produtos</h1></div>    
+            <div class="allproducts">
+                <div class="productslist">
+                <a href="#">Produto 1</a>
+                <a href="#">Produto 2</a>
+                <a href="#">Produto 3</a>
+                <a href="#">Produto 4</a>
+                </div>
+                <div class=""><a href="produtos">Conheça nossa linha de produtos</a></div>
+            </div>
         </div>
     </main>
 
