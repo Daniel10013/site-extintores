@@ -1,0 +1,117 @@
+main {
+    & .banner img {
+        width: 100%;
+    }
+
+    & .title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 15px;
+        padding: 5px;
+    }
+
+    & .information {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #DBDBDB;
+        border: solid 1px blue;
+        border-radius: 60px 60px 0px 0px;
+        padding: 30px;
+    }
+
+    & .text{
+        margin: 25px;
+    }
+
+    & .text p {
+        width: 60%;
+        height: 125px;
+        padding: 5px;
+        gap: 10px;
+        text-align: justify;
+    }
+
+    & .text a {
+        border: solid 1px #AC0202;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #AC0202;
+        border-radius: 35px;
+        height: 35px;
+        width: 370px;
+        padding: 1px 10px 1px 10px;
+        color: white;
+        text-decoration: none;
+    }
+
+    & .banneraboutus img {
+        margin: 25px;
+        border: solid 1px black;
+        width: 100%;
+    }
+
+    & .allproducts {
+        background-color: #AC0202;
+        border-radius: 60px 60px 0px 0px;
+        padding: 15px;
+    }
+
+    & .productslist {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    & .card {
+        margin: 20px;
+        width: 270px;
+        background-color: white;
+        border-radius: 15px;
+        transition: 0.4s;
+    }
+
+    & .card a{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    & .card:hover {
+        width: 275px;
+        transition: 0.3s;
+    }
+
+    & .card img {
+        border-radius: 15px;
+    }
+
+    & .card a {
+        text-decoration: none;
+        color: black;
+    }
+
+    & .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 25px;
+    }
+
+    & .button a {
+        border: solid 1px white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        border-radius: 35px;
+        height: 40px;
+        width: 370px;
+        padding: 1px 10px 1px 10px;
+        color: black;
+        text-decoration: none;
+    }
+}

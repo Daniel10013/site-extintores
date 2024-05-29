@@ -38,11 +38,13 @@ header {
     & a {
         text-decoration: none;
         color: gray;
+        transition: 0.4s;
     }
 
     & a:hover{
+        font-size: 17px;
         color: red;
-        transition: 0.2s;
+        transition: 0.3s;
     }
 
     & .whatsapp {
@@ -64,6 +66,7 @@ header {
     }
 }
 
+<<<<<<< HEAD
 main {
     .banner img{
         width: 100%;
@@ -110,14 +113,17 @@ main {
     }
 }
 
+=======
+>>>>>>> 46663958c7a4af9476abd08712392c67db28f244
 footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* border: solid 1px green; */
+    background-color: #F5F5F5;
     height: 125px;
-    padding: 5px;
+    padding: 15px;
     gap: 5px;
+    
 
     & .contactlist {
         display: flex;
@@ -141,11 +147,6 @@ footer {
         gap: 45px;
     }
 
-    & a {
-        text-decoration: none;
-        color: grey;
-    }
-
     & .copyright {
         display: flex;
         justify-content: center;
@@ -163,9 +164,16 @@ footer {
         color: gray;
     }
 
+    & a {
+        text-decoration: none;
+        color: grey;
+        transition: 0.4s;
+    }
+
     & .copyright a:hover{
+        font-size: 17px;
         color: red;
-        transition: 0.2s;
+        transition: 0.3s;
     }
 }
 
