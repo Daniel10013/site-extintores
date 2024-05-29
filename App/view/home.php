@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?= ASSETS_DIR ?>css/global.css">
-    <link rel="stylesheet" href="<?= ASSETS_DIR?>css/home.css">
+    <link rel="stylesheet" href="<?= ASSETS_DIR ?>css/home.css">
     <title>Document</title>
 </head>
 
@@ -27,38 +27,50 @@
     </header>
 
     <main>
-        <div class="banner"><a href="#"><img src="<?= ASSETS_DIR?>img/bannerHome.png" alt="Banner Apaga Extintores"></a></div>
+        <div class="banner"><a href="#"><img src="<?= ASSETS_DIR ?>img/bannerHome.png" alt="Banner Apaga Extintores"></a>
+        </div>
 
         <div class="about-us">
             <div class="title">
-                <h1>Conheça Mais Sobre Nós</h1>
+                <h1>Conheça Mais <span style="color: #AC0202;">Sobre Nós</span></h1>
             </div>
             <div class="information">
                 <div class="text">
-                    <p>Somos a Apaga Extintores, sua parceira confiável na proteção contra incêndios. 
+                    <p>Somos a Apaga Extintores, sua parceira confiável na proteção contra incêndios.
                         Com um compromisso inabalável com a segurança e a excelência,
-                        oferecemos soluções completas para atender às suas necessidades de prevenção e combate a incêndios. 
+                        oferecemos soluções completas para atender às suas necessidades de prevenção e combate a
+                        incêndios.
                     </p>
                     <p>
-                        Na Apaga Extintores, entendemos a importância crítica de proteger vidas e propriedades. 
-                        É por isso que nos dedicamos a fornecer produtos de alta qualidade, 
+                        Na Apaga Extintores, entendemos a importância crítica de proteger vidas e propriedades.
+                        É por isso que nos dedicamos a fornecer produtos de alta qualidade,
                         serviços especializados e educação contínua sobre segurança contra incêndios.
                     </p>
                     <a href="sobre-nos">Clique aqui e conheça mais sobre a gente!</a>
                 </div>
-                <img src="<?= ASSETS_DIR?>img/bannerAboutUs.png" alt="Sobre nós">
+                <div class="banneraboutus"><img src="<?= ASSETS_DIR ?>img/bannerAboutUs.png" alt="Sobre nós"></div>
             </div>
         </div>
         <div class="products">
-            <div><h1>Veja Nossos Produtos</h1></div>    
-            <div class="cards">
+            <div class="title">
+                <h1>Veja Nossos <span style="color: #AC0202;">Produtos</span></h1>
+            </div>
+            <div class="allproducts">
                 <div class="productslist">
-                <a href="#">Produto 1</a>
-                <a href="#">Produto 2</a>
-                <a href="#">Produto 3</a>
-                <a href="#">Produto 4</a>
+                    <div class="card">
+                        <a href="#"><img src="<?= ASSETS_DIR ?>img/extintor.jpg" alt="Produto" style="width:100%">Produto 1</a>
+                    </div>
+                    <div class="card">
+                        <a href="#"><img src="<?= ASSETS_DIR ?>img/extintor.jpg" alt="Produto" style="width:100%">Produto 2</a>
+                    </div>
+                    <div class="card">
+                        <a href="#"><img src="<?= ASSETS_DIR ?>img/extintor.jpg" alt="Produto" style="width:100%">Produto 3</a>
+                    </div>
+                    <div class="card">
+                        <a href="#"><img src="<?= ASSETS_DIR ?>img/extintor.jpg" alt="Produto" style="width:100%">Produto 4</a>
+                    </div>
                 </div>
-                <div class=""><a href="produtos">Conheça nossa linha de produtos</a></div>
+                <div class="button"><a href="produtos">Conheça nossa linha de produtos</a></div>
             </div>
         </div>
     </main>
@@ -82,7 +94,9 @@
                 <li><a href="produtos">Produtos</a></li>
                 <li><a href="contato">Contato</a></li>
             </ul>
-            <p>Projetado e Desenvolvindo por <a href="https://www.linkedin.com/in/daniel-filipe-cv/" target="_blank">Daniel</a> e <a href="https://www.linkedin.com/in/lucaseduardo1975" target="_blank">Lucas</a></p>
+            <p>Projetado e Desenvolvindo por <a href="https://www.linkedin.com/in/daniel-filipe-cv/"
+                    target="_blank">Daniel</a> e <a href="https://www.linkedin.com/in/lucaseduardo1975"
+                    target="_blank">Lucas</a></p>
         </div>
     </footer>
 
