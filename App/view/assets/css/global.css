@@ -64,7 +64,6 @@ header {
     }
 }
 
-
 main {
     .banner img{
         width: 100%;
@@ -110,7 +109,6 @@ main {
         width: 550px;
     }
 }
-
 
 footer {
     display: flex;
