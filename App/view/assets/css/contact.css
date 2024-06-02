@@ -1,0 +1,85 @@
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    & .banner{
+        position: relative;
+    }
+
+    & .bannerlink{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        gap: 45px;
+        color: white;
+    }
+
+    & .banner h1{
+        padding: 45px;
+    }
+
+    & ul {
+        list-style: none;
+        display: flex;
+        gap: 75px;
+    }
+
+    & a {
+        text-decoration: none;
+        color: white;
+    }
+
+    & .listcontact img{
+        width: 18px;
+    }
+
+    & .message{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: solid 1px pink;
+        width: 1050px;
+    }
+
+    & .line{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: solid 1px silver;
+        width: 950px;
+    }
+
+    & .message h6{
+        display: flex;
+        justify-self: start;
+        align-items: flex-start;
+    }
+
+    & .information{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border: solid 1px blue;
+        padding: 15px;
+        gap: 5px;
+    }
+
+    & .information input{
+        padding: 2px 5px;
+        border-radius: 35px;
+        gap: 15px;
+    }
+
+    & .g-recaptcha{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
