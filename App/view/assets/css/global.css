@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    overflow-y: none;
     box-sizing: border-box;
     font-family: "Poppins", monospace;
 }
@@ -66,7 +67,6 @@ header {
     }
 }
 
-<<<<<<< HEAD
 main {
     .banner img{
         width: 100%;
@@ -113,8 +113,6 @@ main {
     }
 }
 
-=======
->>>>>>> 46663958c7a4af9476abd08712392c67db28f244
 footer {
     display: flex;
     justify-content: center;
