@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="<?= ASSETS_DIR ?>css/global.css">
     <link rel="stylesheet" href="<?= ASSETS_DIR ?>css/home.css">
+    <script src="<?= ASSETS_DIR?>js/main.js"></script>
     <title>Document</title>
 </head>
 
@@ -28,14 +30,14 @@
             <button class="close" id="closeButton">
                  <i class="fas fa-times"></i>
             </button>
-            <ul class="">
+            <ul class="list-mobile">
                 <li><a href="home">Home</a></li>
                 <li><a href="sobre-nos">Sobre Nós</a></li>
                 <li><a href="produtos">Produtos</a></li>
                 <li><a href="contato">Contato</a></li>
             </ul>
         </div>
-        <button class="hamburger" id="hamburguerButton">
+        <button class="hamburger" id="hamburgerButton">
             <i class="fas fa-bars"></i>
         </button>
     </header>
