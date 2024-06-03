@@ -13,7 +13,19 @@ class Emails extends Model{
     }
 
     public function saveEmail(array $messageData): bool{
-        $query = "INSERT INTO {$this->table} VALUES (NULL, '?', '?', '?', '?', '?')";
+        $messageData["date"] = date("d/m/Y");
+        $messageData["time"] = date("H:i:s");
+        $query = "INSERT INTO {$this->table} VALUES (NULL, '?', '?', '?', '?', '?', '?', '?')";
         return $this->sendData($query, $messageData);
+    }
+
+    public function getAll(): array{
+        $query = "SELECT * FROM {$this->table};";
+        return $this->getData($query, []);
+    }
+
+    public function getById($id): array{
+        $query = "SELECT * FROM {$this->table} WHERE `id` = ?;";
+        return $this->getData($query, [$id]);
     }
 }

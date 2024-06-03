@@ -2,14 +2,6 @@
     Header set Access-Control-Allow-Origin "*"
 </FilesMatch>
 
-<IfModule mod_deflate.c>
-    AddOutputFilterByType DEFLATE text/css
-    AddOutputFilterByType DEFLATE application/javascript
-    AddOutputFilterByType DEFLATE application/x-javascript
-    AddOutputFilterByType DEFLATE image/svg+xml
-    AddOutputFilterByType DEFLATE image/svg
-</IfModule>
-
 <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteBase /site-extintores/

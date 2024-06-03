@@ -1,0 +1,273 @@
+header{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px 0px 20px;
+    background-color: white;
+    box-shadow: 0px 3px 3px rgb(190, 190, 190);
+
+    & a{
+        z-index: +2;
+        & img{
+            height: 45px;
+        }
+    }
+
+    & h1{
+        font-size: 28px;
+        text-align: center;
+        position: absolute;
+        width: 97.8%;
+        z-index: +1;
+        color: #343434;
+    }
+
+    & button{
+        z-index: +2;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        font-size: 18px;
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        height: fit-content;
+        padding: 4px 10px 4px 10px;
+        border-radius: 10px;
+        color: rgb(121, 121, 121);
+        transition: 0.2s;
+
+        & i{
+            font-size: 22px;
+        }
+    }
+
+    & button:hover{
+        background-color: rgb(185,24,24);
+        color: white;
+        cursor: pointer;
+    }
+}
+
+main{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    width: 100%;
+
+    & .back{
+        width: 100%;
+        margin-bottom: 10px;
+
+        & a{
+            text-decoration: none;
+            color: #797979;
+            transition: 0.3s;
+        }
+
+        & a:hover{
+            color: #343434;
+        }
+    }
+}
+
+.error-section{
+    width: 80%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.email-section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mail-title{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: #343434;
+
+    & span{
+        color: rgb(189, 32, 32);
+    }
+
+    & button{
+        font-size: 18px;
+        background-color: transparent;
+        padding: 3px 10px;
+        border-radius: 5px;
+        transition: 0.2s;
+        border: 1px solid transparent;
+    }
+
+    & button:hover{
+        color: rgb(150, 37, 37);
+        cursor: pointer;
+        border-color: rgb(150, 37, 37);
+    }
+}
+
+.email-content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    & h2{
+        color: #aaaaaa;
+        font-size: 18px;
+    }
+
+    & .phone-name{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        gap: 10px;
+        
+        & div{
+            width: 100%;
+        }
+    }
+
+    & div{
+        & h1{
+            color: #343434;
+        }
+
+        & .content{
+            background-color: rgb(236, 236, 236);
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 20px;
+        }
+
+        & .message{
+            min-height: 38.5vh;
+        }
+
+        & .sender-mail{
+            word-break: break-all;
+        }
+    }
+}
+
+@media screen and (max-width: 770px){
+    header{
+        & a{
+            z-index: +2;
+            & img{
+                height: 40px;
+            }
+        }
+    
+        & h1{
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 470px){
+    main{
+        margin-top: 10px;
+        padding: 5px;
+    }
+
+    .email-section{
+        gap: 10px;
+    }
+
+    .mail-title{
+        flex-direction: column;
+        gap: 5px;
+
+        & h2{
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    .email-content{
+        & h2{
+            width: 100%;
+            text-align: center;
+        }
+    
+        & .phone-name{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+    }
+    
+}
+
+@media screen and (max-width: 350px){
+    main{
+        margin-top: 10px;
+        padding: 5px;
+    }
+    header{
+    width: 100%;
+    height: fit-content;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+
+    & a{
+        z-index: +2;
+        & img{
+            height: 45px;
+        }
+    }
+
+    & h1{
+        font-size: 28px;
+        text-align: center;
+        position: absolute;
+        width: 97.8%;
+        z-index: +1;
+        color: #343434;
+    }
+
+    & button{
+        z-index: +2;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        font-size: 18px;
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        height: fit-content;
+        padding: 4px 10px 4px 10px;
+        border-radius: 10px;
+        color: rgb(121, 121, 121);
+        transition: 0.2s;
+
+        & i{
+            font-size: 22px;
+        }
+    }
+
+    & button:hover{
+        background-color: rgb(185,24,24);
+        color: white;
+        cursor: pointer;
+    }
+}
+
+}

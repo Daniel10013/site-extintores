@@ -5,6 +5,7 @@ namespace App\Model;
 use App\Lib\Logger\Logger;
 use Exception;
 use mysqli;
+use mysqli_result;
 
 class Model{
 
@@ -43,11 +44,40 @@ class Model{
             Logger::saveLog($this->connection->error);
             return false;
         }
+        $this->connection->close();
         return true;    
     }
 
+    protected function getData(string $query, array $queryParams): array{
+        $bindedQuery = $this->getBindedQuery($query, $queryParams);
+        $queryResult = $this->connection->query($bindedQuery);
+        if($queryResult == false){
+            Logger::saveLog($this->connection->error);
+            throw new Exception("Erro ao pegar dados do banco de dados!");
+        }
+
+        $this->connection->close();
+        return $this->getResult($queryResult);
+    }
+
+    private function getResult(mysqli_result $queryResult): array{
+        $resultFetch = $queryResult->fetch_all(MYSQLI_ASSOC);
+        $databaseData = $resultFetch == NULL ? [] : $resultFetch;
+        if(sizeof($databaseData) == 1){
+            return $databaseData[0];
+        }
+        return $databaseData;
+    }
+
     private function getBindedQuery(string $query, array $data):string {
+        if(empty($data) == true){
+            return $query;
+        }
         $escapedData = $this->getEscapedParams($data);
+        if(sizeof($escapedData) == 1){
+            return str_replace("?", $escapedData[0], $query);
+        }
+
         foreach($escapedData as $escapedValue){
             $bindPosition = strpos($query, "?");
             $query = substr_replace($query, $escapedValue, $bindPosition, 1);
@@ -63,24 +93,8 @@ class Model{
         return $datToEscape;
     }
 
-    protected function getData(string $query, array $queryParams): array{
-        $bindedQuery = $this->getBindedQuery($query, $queryParams);
-        $queryResult = $this->connection->query($bindedQuery);
-        var_dump($queryResult);die;
-        $databaseData = [];
-        if($queryResult == false){
-            Logger::saveLog($this->connection->error);
-            throw new Exception("Erro ao pegar dados do banco de dados!");
-        }
-        
-        return $databaseData;
-    }
-
-    protected function getById(int $id): array{
-        $data = [];
-        $query = "SELECT * FROM {$this->table} WHERE id = {$id}";
-        $this->connection->query($query);
-
-        return $data;
-    }
+    public function delete(int $id): bool{
+        $query = "DELETE FROM {$this->table} WHERE `id` = ?";
+        return $this->sendData($query, [$id]);
+    } 
 }

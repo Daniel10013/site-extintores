@@ -9,7 +9,7 @@ class Logger{
     public static string $PATH_TO_SAVE_LOG = BASE_DIR . "/Logs";
 
     public static function saveLog(string $logText): void{
-        $timeStamp = date("Y-m-d") . ": " . date("h:i:sa");
+        $timeStamp = date("d-m-Y") . ": " . date("h:i:sa");
         $messageToSave = $timeStamp . ": {$logText}\n";
         
         $logFile = self::getLogFile();
@@ -17,7 +17,7 @@ class Logger{
     }
 
     private static function getLogFile(){
-        $todayDate = date("Y-m-d");
+        $todayDate = date("d-m-Y");
         $fileName = $todayDate . ".log";
 
         $pathToSaveFile = self::$PATH_TO_SAVE_LOG . "\\" . $fileName;
