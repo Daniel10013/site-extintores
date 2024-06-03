@@ -18,7 +18,7 @@ $message = isset($_POST["message"]) == false ? "" : $_POST["message"];
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -49,37 +49,37 @@ $message = isset($_POST["message"]) == false ? "" : $_POST["message"];
 
     <main>
         <div class="banner">
-            <img src="<?= ASSETS_DIR ?>img/banner.png" alt="Banner Contato" style="width: 100%;">
+            <img src="<?= ASSETS_DIR ?>img/bannerContact.png" alt="Banner Contato" style="width: 100%;">
             <div class="bannerlink">
                 <h1>Entre em contato com a gente!</h1>
                 <ul class="listcontact">
-                    <li><a href="#"><img src="<?= ASSETS_DIR?>img/telephoneIcon.png" alt="Icone">31 9190-9947</a></li>
-                    <li><a href="#"><img src="<?= ASSETS_DIR?>img/whatsappIcon.png" alt="Icone">31 99305-1820</a></li>
-                    <li><a href="#"><img src="<?= ASSETS_DIR?>img/emailIcon.png" alt="Icone">apagaextintoresbhz@gmail.com</a></li>
-                    <li><a href="#"><img src="<?= ASSETS_DIR?>img/emailIcon.png" alt="Icone">apagasarzedo@gmail.com</a></li>
+                    <li><a href="#"><img src="<?= ASSETS_DIR?>img/telephoneIcon.png" alt="Icone" class="telephoneicon">31 9190-9947</a></li>
+                    <li><a href="#"><img src="<?= ASSETS_DIR?>img/whatsappIcon.png" alt="Icone" class="whatsicon">31 99305-1820</a></li>
+                    <li><a href="#"><img src="<?= ASSETS_DIR?>img/emailIcon.png" alt="Icone" class="emailicon">apagaextintoresbhz@gmail.com</a></li>
+                    <li><a href="#"><img src="<?= ASSETS_DIR?>img/emailIcon.png" alt="Icone" class="emailicon">apagasarzedo@gmail.com</a></li>
                 </ul>
             </div>
         </div>
-        <div>
+        <div class="content">
             <div class="message">
-                <h1>Deixe sua mensagem!</h1>
+                <h1 style="color: #343434;">Deixe sua mensagem!</h1>
                 <div class="line"></div>
-                <h6>Campos com um * são obrigatórios</h6>
+                <h6 style="color: #9E9E9E;">Campos com um * são obrigatórios</h6>
             </div>
             <div class="information">
                 <form method="post">
-                    <div>
-                        <input type="text" name="name" placeholder="Nome*" value="<?= $name ?>">
-                        <input type="mail" name="email" placeholder="E-mail*" value="<?= $email ?>">
+                    <div class="first-line">
+                        <input type="text" name="name" placeholder="Nome*" value="<?= $name ?>" style="width: 60%;">
+                        <input type="mail" name="email" placeholder="E-mail*" value="<?= $email ?>" style="width: 40%;">
                     </div>
-                    <div>
-                        <input type="text" name="subject" placeholder="Assunto*" value="<?= $subject ?>">
-                        <input type="text" name="phone" placeholder="Telefone*" value="<?= $phone ?>">
+                    <div class="second-line">
+                        <input type="text" name="subject" placeholder="Assunto*" value="<?= $subject ?>" style="width: 70%;">
+                        <input type="text" name="phone" placeholder="Telefone*" value="<?= $phone ?>" style="width: 30%;">
                     </div>
                     <textarea name="message" id="" placeholder="Mensagem*"><?= $message ?></textarea>
                     <div class="g-recaptcha" data-sitekey="<?= Recaptcha::getSiteKey() ?>">
                     </div>
-                    <input type="submit" name="send-mail" value="Enviar mensagem">
+                    <input type="submit" name="send-mail" class="sendmessage" value="Enviar mensagem">
                 </form>
                 <?php
                 if ($result != "") {

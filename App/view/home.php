@@ -24,6 +24,20 @@
             <img src="<?= ASSETS_DIR ?>img/whatsapp_logo.png" alt="Whatsapp Logo">
             <a href="#">31 99305-1820</a>
         </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <button class="close" id="closeButton">
+                 <i class="fas fa-times"></i>
+            </button>
+            <ul class="">
+                <li><a href="home">Home</a></li>
+                <li><a href="sobre-nos">Sobre Nós</a></li>
+                <li><a href="produtos">Produtos</a></li>
+                <li><a href="contato">Contato</a></li>
+            </ul>
+        </div>
+        <button class="hamburger" id="hamburguerButton">
+            <i class="fas fa-bars"></i>
+        </button>
     </header>
 
     <main>
@@ -58,7 +72,7 @@
             <div class="allproducts">
                 <div class="productslist">
                     <div class="card">
-                        <a href="#"><img src="<?= ASSETS_DIR ?>img/extintor.jpg" alt="Produto" style="width:100%">Produto 1</a>
+                        <a href="produto"><img src="<?= ASSETS_DIR ?>img/extintor.jpg" alt="Produto" style="width:100%">Produto 1</a>
                     </div>
                     <div class="card">
                         <a href="#"><img src="<?= ASSETS_DIR ?>img/extintor.jpg" alt="Produto" style="width:100%">Produto 2</a>
