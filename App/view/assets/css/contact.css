@@ -21,7 +21,8 @@ main{
     }
 
     & .banner h1{
-        padding: 45px;
+        padding: 20px;
+        font-size: 50px;
     }
 
     & ul {
@@ -36,15 +37,32 @@ main{
     }
 
     & .listcontact img{
-        width: 18px;
+        position: relative;
     }
+
+    & .telephoneicon{
+        width: 15px;
+        right: 5px;
+        top: 1px;
+    }
+
+    & .whatsicon{
+        width: 18px;
+        right: 5px;
+        top: 3px;
+    }
+
+    & .emailicon{
+        width: 18px;
+        right: 5px;
+        top: 5px;
+    }    
 
     & .message{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        border: solid 1px pink;
         width: 1050px;
     }
 
@@ -52,34 +70,47 @@ main{
         display: flex;
         justify-content: center;
         align-items: center;
-        border: solid 1px silver;
-        width: 950px;
-    }
-
-    & .message h6{
-        display: flex;
-        justify-self: start;
-        align-items: flex-start;
+        border: solid 1px #A6A6A6;
+        width: 1050px;
     }
 
     & .information{
         display: flex;
-        justify-content: space-around;
-        align-items: center;
-        border: solid 1px blue;
-        padding: 15px;
+        width: 1050px;
         gap: 5px;
     }
 
-    & .information input{
-        padding: 2px 5px;
-        border-radius: 35px;
-        gap: 15px;
+    & .first-line{
+        display: flex;
+        width: 1050px;
     }
 
-    & .g-recaptcha{
+    & .second-line{
         display: flex;
-        justify-content: center;
-        align-items: center;
+        width: 1050px;
+    }
+
+    & .information input{
+        border: solid 1px #A6A6A6;
+        height: 40px;
+        padding: 2px 5px;
+        border-radius: 35px;
+    }
+
+    & textarea{
+        border: solid 1px #A6A6A6;;
+        height: 150px;
+        width: 1050px;
+        border-radius: 20px;
+        padding: 5px 10px;
+    }
+
+    & .sendmessage{
+        cursor: pointer;
+        font-size: 20px;
+        width: 30%;
+        border: none;
+        color: white;
+        background-color: #AC0202;
     }
 }

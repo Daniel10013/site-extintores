@@ -48,6 +48,8 @@ header {
     }
 
     & .whatsapp {
+        position: absolute;
+        right: 0;
         border: solid 1px #25A722;
         display: flex;
         background-color: #25A722;
@@ -63,6 +65,10 @@ header {
         padding: 10px;
         color: white;
         font-size: 20px;
+    }
+
+    & .mobile-menu{
+        display: none;
     }
 }
 
@@ -151,4 +157,24 @@ footer {
 .error{
     border: solid 2px rgb(156, 22, 22);
     color: rgb(156, 22, 22);
+}
+
+@media (max-width: 768px){
+    .whatsapp{
+        display: none;
+        border: none;
+        background-color: transparent;
+    }
+
+    .whatsapp img{
+        display: none;
+    }
+
+    .whatsapp a{
+        display: none;
+    }
+
+    .listlink{
+        display: none;
+    }
 }
