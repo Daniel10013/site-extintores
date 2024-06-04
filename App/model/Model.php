@@ -10,10 +10,10 @@ use mysqli_result;
 class Model{
 
     private Mysqli $connection;
-    private string $host = "localhost";
-    private string $database = "site-extintor";
-    private string $user = "root";
-    private string $password = "";
+    private string $host = "apaga_extintor.mysql.dbaas.com.br";
+    private string $database = "apaga_extintor";
+    private string $user = "apaga_extintor";
+    private string $password = "V9HUu##Lxqz2y";
     
     public $table;
 
