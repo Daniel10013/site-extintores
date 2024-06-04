@@ -14,6 +14,6 @@
               host: ${{ secrets.HOST }} 
               user: ${{ secrets.USER }}
               password: ${{ secrets.PASS }}
-              localDir: "dist"
+              localDir: "."
               remoteDir: "public_html"
             
