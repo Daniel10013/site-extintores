@@ -10,10 +10,10 @@ use mysqli_result;
 class Model{
 
     private Mysqli $connection;
-    private string $host = "apaga_extintor.mysql.dbaas.com.br";
-    private string $database = "apaga_extintor";
-    private string $user = "apaga_extintor";
-    private string $password = "V9HUu##Lxqz2y";
+    private string $host = DB_HOST;
+    private string $database = DB_NAME;
+    private string $user = DB_USER;
+    private string $password = DB_PASS;
     
     public $table;
 
@@ -64,7 +64,7 @@ class Model{
         $resultFetch = $queryResult->fetch_all(MYSQLI_ASSOC);
         $databaseData = $resultFetch == NULL ? [] : $resultFetch;
         if(sizeof($databaseData) == 1){
-            return $databaseData[0];
+            return [$databaseData[0]];
         }
         return $databaseData;
     }
@@ -97,4 +97,9 @@ class Model{
         $query = "DELETE FROM {$this->table} WHERE `id` = ?";
         return $this->sendData($query, [$id]);
     } 
+
+    public function getById(int $id): array{
+        $query = "SELECT * FROM {$this->table} WHERE `id` = ?";
+        return $this->getData($query, [$id]);
+    }
 }

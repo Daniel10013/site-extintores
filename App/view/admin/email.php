@@ -37,7 +37,7 @@ $email = $emailData["email"];
     </header>
     <main>
         <div class="back">
-            <a href="../"><i class="fa-solid fa-arrow-left"></i> Voltar</a>
+            <a href="<?= BASE_URL ?>admin"><i class="fa-solid fa-arrow-left"></i> Voltar</a>
         </div>
         <?php 
             if($error == true){
@@ -124,7 +124,7 @@ function getEmailData(){
         $emailData = (new Email())->getEmailById(UrlParser::getUrlParameter(3));
         $error = $emailData["status"] == false ? true : false;
         if($error == false){
-            return ["status" => $error, "message" => "", "email" => $emailData["email"]];
+            return ["status" => $error, "message" => "", "email" => $emailData["email"][0]];
         }
         if($error == true){
             $exceptionMessage = $emailData["message"];

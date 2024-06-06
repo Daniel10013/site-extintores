@@ -91,10 +91,8 @@ class Email{
     }
 
     private function sendEmailWithMailer(array $messageData):bool {
-        // $mailer = new Mailer($messageData);
-        // return $mailer->sendEmail();
-        return true;
-        //todo: implementar envio de email com a Lib/Mail/Mailer.php
+        $mailer = new Mailer($messageData);
+        return $mailer->sendEmail();
     }
 
     public function getAllEmails(): array{

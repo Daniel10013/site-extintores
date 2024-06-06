@@ -36,7 +36,20 @@ class Users extends Controller{
     private function redirectOnLogin(array $userData): void{
         Session::set("userId", $userData["id"]);
         Session::set("username", $userData["username"]);
+        Session::set("userEmail", $userData["email"]);
         $this->redirectIfLoged();
+    }
+
+    public function updateUser($postData){
+        try{
+            return $this->business->updateUser($postData);
+        }
+        catch(Exception $error){
+            return [
+                "message" => $error->getmessage(),
+                "status" => false
+            ];
+        }
     }
 
     public static function redirectIfLoged(): void{

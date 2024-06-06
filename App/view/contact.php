@@ -8,6 +8,10 @@ $result = "";
 if (isset($_POST["send-mail"])) {
     $contactController = new Email();
     $result = $contactController->sendEmail($_POST);
+    
+    if($result["status"] == true){
+        $_POST = [];
+    }
 }
 
 $name = isset($_POST["name"]) == false ? "" : $_POST["name"];

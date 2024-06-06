@@ -30,38 +30,42 @@ class Mailer{
             "phone" => "Telefone", 
             "message" => "Mensagem"
         ];
-        
-        $body = "<h1>Confira a mensagem enviada pela página \"Contato\" no site!<h1>";
-        foreach($messageData as $key => $content){
-            $body .= "<b>{$messageFields[$key]}</b> : {$content}<br>";
-        }
 
-        return $body;
+        $body = '<h2 style="font-family: \'Google Sans\',Roboto; background-color: #912727; text-align: center; padding: 20px; color: white">
+                        Confira a mensagem recebida pela página de contato no site!</h2>';
+        foreach($messageData as $key => $content){
+            $body .= <<<MAIL_DATA
+                        <div style="font-family: 'Google Sans',Roboto; color: black">
+                            <b style="font-size: 20px">{$messageFields[$key]}:</b> <span style="font-size: 18px">{$content}</span>
+                        </div>
+                        </br>
+                     MAIL_DATA;
+        }
+        return mb_convert_encoding($body, "UTF8");
     }
+
 
     public function sendEmail(){
         $mail = new PHPMailer(true);
         try {
-            //Server settings
-            // $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
-            $mail->isSMTP();                                            //Send using SMTP
             $mail->setLanguage('pt_br');
-            $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
-            $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-            $mail->Username   = "daniel.filipesoarescv@gmail.com";                     //SMTP username
-            $mail->Password   = '8oPa75eFq6awxai3BBb5GYmPLdUu';                               //SMTP password F21Ja01@8 
-            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
-            $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+            $mail->isSMTP();
+            $mail->SMTPAuth   = true;
+            $mail->Host       = MAILER_HOST;
+            $mail->Username   = MAILER_USER;
+            $mail->Password   = MAILER_PASS;
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+            $mail->Port       = 465;
 
             //Recipients
-            $mail->setFrom('no-reply@gmail.com', 'E-mails Apaga Extintores');
-            $mail->addAddress('daniel.filipesoarescv@gmail.com', $this->senderName);     //Add a recipient  //Name is optional
+            $mail->setFrom('contato@apagaextintores.com.br', 'E-mails Apaga Extintores');
+            $mail->addAddress('daniel.filipesoarescv@gmail.com', $this->senderName);
             $mail->addReplyTo($this->from);
             // $mail->addCC('cc@example.com');
             // $mail->addBCC('bcc@example.com');
 
             //Content
-            $mail->isHTML(true);                                  //Set email format to HTML
+            $mail->isHTML(true);
             $mail->Subject = $this->subject;
             $mail->Body = $this->body;
             if($mail->send()){

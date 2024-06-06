@@ -69,3 +69,16 @@ $(".delete").on("click", function(){
         })
     })
 })
+
+$(".table-row-mobile").on("click", function(){
+    const id = $(this).data("id");
+
+    $("[data-id="+id+"] .mobile-closed").toggleClass("closed");
+    $("[data-id="+id+"] .mobile-closed").toggleClass("open");
+    
+
+    $("[data-id="+id+"] .mobile-content").toggleClass("openContent");
+    $("[data-id="+id+"] .mobile-content").toggleClass("closed");
+    
+
+})
