@@ -110,9 +110,12 @@
                 <li><a href="produtos">Produtos</a></li>
                 <li><a href="contato">Contato</a></li>
             </ul>
-            <p>Projetado e Desenvolvindo por <a href="https://www.linkedin.com/in/daniel-filipe-cv/"
-                    target="_blank">Daniel</a> e <a href="https://www.linkedin.com/in/lucaseduardo1975"
-                    target="_blank">Lucas</a></p>
+            <p class="devs">
+                Projetado e Desenvolvindo por 
+                <a href="https://www.linkedin.com/in/daniel-filipe-cv/" target="_blank">Daniel</a> 
+                e 
+                <a href="https://www.linkedin.com/in/lucaseduardo1975" target="_blank">Lucas</a>
+            </p>
         </div>
     </footer>
 

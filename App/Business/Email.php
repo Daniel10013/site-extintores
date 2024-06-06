@@ -12,18 +12,18 @@ class Email{
     public function sendEmail(array $postData): array{
         $this->validateRecaptcha($postData);
         $this->validateMessageData($postData);
-        // deixar parte de enviar email para depois, pois preciso dos dados do dominio para configurar o servidor de email
+        
         $messageData = $this->formateMessageDataToSend($postData);
         if($this->sendEmailWithMailer($messageData) == false){
-            return ["status"=> false, "mensagem" => "Ocorreu um erro eo enviar o e-mail!"];            
+            return ["status"=> false, "message" => "Ocorreu um erro eo enviar o e-mail!"];            
         }
         
         $emailsModel = new Emails($messageData);
         if($emailsModel->saveEmail($messageData) == true){
-            return ["status"=> true, "mensagem" => "E-mail enviado com sucesso!"];
+            return ["status"=> true, "message" => "E-mail enviado com sucesso!"];
         }
 
-        return ["status" => false, "mensagem" => "O email foi enviado porém, ocorreu um erro eo salvar o e-mail no banco de dados!"];               
+        return ["status" => false, "message" => "O email foi enviado porém, ocorreu um erro eo salvar o e-mail no banco de dados!"];               
     }
 
     private function formateMessageDataToSend(array $messageData): array{
@@ -40,6 +40,11 @@ class Email{
         $emailIsValid = str_contains($messageData["email"], "@") && str_contains($messageData["email"], ".");
         if($emailIsValid == false){
             throw new Exception("O e-mail é inválido!");
+        }
+
+        $emailSizeIsInvalid = strlen($messageData["email"]) > 40;
+        if($emailSizeIsInvalid == true){
+            throw new Exception("O tamanho do e-mail é grande demais!");
         }
 
         return true;
@@ -92,8 +97,27 @@ class Email{
         //todo: implementar envio de email com a Lib/Mail/Mailer.php
     }
 
+    public function getAllEmails(): array{
+        $emails = (new Emails())->getAll();
+        return $emails;
+    }
 
-    public function getEmails(){
+    public function getById(int $id): array{
+        $emailData = (new Emails())->getById($id);
 
+        if(empty($emailData == true)){
+            return ["status" => false, "message" =>"Nenhum e-mail com esse ID foi encontrado!"];
+        }
+
+        return ["status" => true, "email" => $emailData];
+    }
+
+    public function deleteEmail(array $ajaxData): bool{
+        if(isset($ajaxData["id"]) == false || empty($ajaxData["id"])){
+            throw new Exception("Dados inválidos para apagar o e-mail!");
+        }
+
+        $hasDeleted = (new Emails())->delete($ajaxData["id"]);
+        return $hasDeleted;
     }
 }

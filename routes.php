@@ -13,5 +13,6 @@ $routes = [
     "admin/"=> "admin/index",
     "admin"=> "admin/index",
     "admin/login" => "admin/login",
-    "admin/detalhes-email" => "admin/email"
+    "admin/configuracoes" => "admin/profile",
+    "admin/detalhes-email" => "admin/email",
 ];
