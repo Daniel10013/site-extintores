@@ -28,6 +28,8 @@ main{
     & ul {
         list-style: none;
         display: flex;
+        justify-content: center;
+        align-items: center;
         gap: 75px;
     }
 
@@ -109,8 +111,60 @@ main{
         cursor: pointer;
         font-size: 20px;
         width: 30%;
+        height: 35px;
         border: none;
         color: white;
         background-color: #AC0202;
+    }
+}
+
+@media only screen and (max-width: 1200px){
+    
+}
+
+@media only screen and (max-width: 600px){
+    main{
+
+        & .banner h1{
+            font-size: 30px;
+        }
+
+        & ul{
+            display: none;
+        }
+
+        & .content{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        & .information{
+            display: flex;
+            flex-direction: column;
+            width: 550px;
+        }
+
+        & .first-line{
+            width: 550px;
+        }
+
+        & .second-line{
+            width: 550px;
+        }
+
+        & .line{
+            width: 550px;
+        }
+
+        & textarea{
+            width: 550px;
+        }
+
+        & .sendmessage{
+            font-size: 15px;
+            width: 35%;
+        }
     }
 }

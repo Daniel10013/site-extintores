@@ -20,13 +20,13 @@ main {
         padding: 30px;
     }
 
-    & .text{
+    & .text {
         display: flex;
         flex-direction: column;
         margin: 25px;
         height: 70%;
         width: 50%;
-        
+
     }
 
     & .text p {
@@ -49,6 +49,7 @@ main {
         padding: 1px 10px 1px 10px;
         color: white;
         text-decoration: none;
+        max-width: 768px;
     }
 
     & .banneraboutus img {
@@ -61,7 +62,7 @@ main {
         background-color: #AC0202;
         border-radius: 60px 60px 0px 0px;
         padding: 15px;
-        height: 485px;
+        height: 515px;
     }
 
     & .productslist {
@@ -72,31 +73,29 @@ main {
 
     & .card {
         margin: 20px;
-        width: 270px;
+        height: 343px;
+        width: 300px;
+        border: solid 1px #979797;
         background-color: white;
         border-radius: 15px;
-        transition: 0.4s;
     }
 
-    & .card a{
+    & .card a {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
 
-    & .card:hover {
-        width: 274px;
-        transition: 0.3s;
-    }
-
     & .card img {
+        height: 315px;
+        width: 300px;
         border-radius: 15px;
     }
 
     & .card a {
         text-decoration: none;
-        color: black;
+        color: #343434;
     }
 
     & .button {
@@ -121,26 +120,55 @@ main {
     }
 }
 
-@media (max-width: 768px){
+@media only screen and (max-width: 1280px){
     
+}
+
+@media only screen and (max-width: 600px) {
+    main {
+        & .text {
+            width: 90%;
+        }
+
+        & .text p{
+            font-size: 13px;
+        }
+
+        & .text a{
+            border-radius: 35px;
+            height: 35px;
+            width: 100%;
+            padding: 1px 10px 1px 10px;
+        }
+
+        & .banneraboutus{
+            display: none;
+        }
 
 
-    & .text{
-        width: 70%;
-    }
+        & .allproducts{
+            height: 375px;
+        }
 
-    & .text a{
-        width: 300px;
-    }
+        & .card {
+            height: 225px;
+            width: 150px;
+        }
 
-    & .banneraboutus{
-        display: none;
-    }
+        & .card img {
+            height: 185px;
+            width: 150px;
+        }
 
-    & .allproducts{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        & .card a {
+            text-align: center;
+        }
+
+        & .button a {
+            border-radius: 35px;
+            height: 35px;
+            width: 50%;
+            padding: 1px 10px 1px 10px;
+        }
     }
 }

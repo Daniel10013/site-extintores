@@ -21,19 +21,17 @@ main{
     }
 
     & .products{
-        display: grid;
-        grid: 300px / auto auto auto auto;
-        grid-gap: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         padding: 5px;
-        height: 800px;
-        width: 1350px;
     }
 
     & .cards {
-        height: 300px;
+        height: 350px;
         margin: 20px;
-        width: 270px;
-        border: solid 1px #A6A6A6;
+        width: 335px;
+        border: solid 1px #979797;
         background-color: white;
         border-radius: 15px;
         transition: 0.4s;
@@ -47,11 +45,38 @@ main{
     }
 
     & .cards img {
+        height: 325px;
+        width: 335px;
         border-radius: 15px;
     }
 
     & .cards a {
         text-decoration: none;
-        color: black;
+        color: #979797;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    main{
+        & .banner h1{
+            font-size: 35px;
+        }
+        
+        & .banner img{
+            height: 100px;
+        }
+
+        & .cards {
+            height: 225px;
+            width: 150px;
+            text-align: center;
+        }
+
+        & .cards img {
+            height: 185px;
+            width: 150px;
+        }
+
+
     }
 }

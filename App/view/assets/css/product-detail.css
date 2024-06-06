@@ -31,7 +31,7 @@ main{
         justify-content: space-around;
         align-items: center;
         height: 450px;
-        width: 70%;
+        width: 80%;
     }
 
     & .product img{
@@ -66,4 +66,42 @@ main{
         color: white;
         text-decoration: none;
     }
+}
+
+@media only screen and (max-width: 600px) {
+    main{
+        & .banner h1{
+            font-size: 35px;
+        }
+
+        & .banner img{
+            height: 100px;
+        }
+
+        & .product-details{
+            margin: 15px;
+        }
+
+        & h1{
+            font-size: 25px;
+        }
+
+        & .product{
+            display: flex;
+            flex-direction: column;
+        }
+
+        & .product img{
+            padding: 3px;
+            height: 200px;
+            border-radius: 20px;
+        }
+
+        & .details{
+            font-size: 14px;
+        }
+
+
+    }
+
 }

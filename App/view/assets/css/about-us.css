@@ -1,4 +1,9 @@
 main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     & .banner{
         position: relative;
     }
@@ -20,6 +25,9 @@ main{
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        height: 100%;
+        width: 70%;
+
     }
 
     & .title {
@@ -57,5 +65,25 @@ main{
     & li{
         padding: 10px;
         color: #AC0202;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    main{
+        & .banner h1{
+            font-size: 35px;
+        }
+
+        & .banner img{
+            height: 100px;
+        }
+        
+        & .text p{
+            width: 100%;
+        }
+
+        & .valueslist{
+            width: 100%;
+        }
     }
 }

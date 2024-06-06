@@ -74,16 +74,13 @@
             <div class="allproducts">
                 <div class="productslist">
                     <div class="card">
-                        <a href="produto"><img src="<?= ASSETS_DIR ?>img/extintor.jpg" alt="Produto" style="width:100%">Produto 1</a>
+                        <a href="mangueira"><img src="<?= ASSETS_DIR ?>img/hose.jpg" alt="Mangueira">Mangueira de Incêndio</a>
                     </div>
                     <div class="card">
-                        <a href="#"><img src="<?= ASSETS_DIR ?>img/extintor.jpg" alt="Produto" style="width:100%">Produto 2</a>
+                        <a href="maquina-de-testes"><img src="<?= ASSETS_DIR ?>img/machine.jpg" alt="Maquina de Teste">Maquina de Teste de Mangueira</a>
                     </div>
                     <div class="card">
-                        <a href="#"><img src="<?= ASSETS_DIR ?>img/extintor.jpg" alt="Produto" style="width:100%">Produto 3</a>
-                    </div>
-                    <div class="card">
-                        <a href="#"><img src="<?= ASSETS_DIR ?>img/extintor.jpg" alt="Produto" style="width:100%">Produto 4</a>
+                        <a href="placas"><img src="<?= ASSETS_DIR ?>img/plates.jpg" alt="Placas">Placas de Sinalização</a>
                     </div>
                 </div>
                 <div class="button"><a href="produtos">Conheça nossa linha de produtos</a></div>

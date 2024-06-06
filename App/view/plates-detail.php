@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?= ASSETS_DIR ?>css/global.css">
-    <link rel="stylesheet" href="<?= ASSETS_DIR ?>css/products.css">
+    <link rel="stylesheet" href="<?= ASSETS_DIR ?>css/product-detail.css">
     <title>Document</title>
 </head>
 
@@ -33,15 +33,17 @@
             <h1>Conheça Nossos Produtos</h1>
         </div>
 
-        <div class="products">
-            <div class="cards">
-                <a href="mangueira"><img src="<?= ASSETS_DIR ?>img/hose.jpg" alt="Produto">Mangueira de Incêndio</a>
-            </div>
-            <div class="cards">
-                <a href="maquina-de-testes#"><img src="<?= ASSETS_DIR ?>img/machine.jpg" alt="Produto">Maquina de Teste de Mangueira</a>
-            </div>
-            <div class="cards">
-                <a href="placas"><img src="<?= ASSETS_DIR ?>img/plates.jpg" alt="Produto">Placas de Sinalização</a>
+        <div class="product-details">
+            <h1>Placas de Sinalização de Rota de Fuga</h1>
+            <div class="product">
+                <img src="<?= ASSETS_DIR ?>img/plates.jpg" alt="Produto">
+                <div class="details">
+                    <p>
+                        As placas de sinalização de rota de fuga são elementos essenciais em edifícios e estruturas,
+                        projetadas para orientar as pessoas a saírem de forma segura em caso de emergência.
+                    </p>
+                    <a href="">Solicite seu orçamento!</a>
+                </div>
             </div>
         </div>
     </main>

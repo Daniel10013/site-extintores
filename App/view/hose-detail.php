@@ -34,15 +34,12 @@
         </div>
 
         <div class="product-details">
-            <h1>Produto 1</h1>
+            <h1>Mangueira de Incêndio</h1>
             <div class="product">
-                <img src="<?= ASSETS_DIR ?>img/extintor.jpg" alt="Produto">
+                <img src="<?= ASSETS_DIR ?>img/hose.jpg" alt="Produto">
                 <div class="details">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel officia hic ut doloremque mollitia?
-                        Ad,
-                        tenetur dolores iusto expedita veritatis eum, alias ea est nesciunt aliquid quae perspiciatis
-                        voluptas? Ducimus accusantium ad, minima ipsam deleniti excepturi alias quasi molestiae, vitae
-                        beatae animi ab blanditiis inventore recusandae nemo quisquam eius nesciunt.
+                    <p>As mangueiras de incêndio são componentes essenciais dos sistemas de combate a incêndios, sendo
+                        usadas para fornecer água a alta pressão em situações de emergência.
                     </p>
                     <a href="">Solicite seu orçamento!</a>
                 </div>
