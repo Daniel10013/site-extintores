@@ -13,7 +13,7 @@ $(".logout").on("click", function(){
            return;
         }
 
-        $.get("http://localhost/site-extintores/ajax/logout", function(response){
+        $.get("https://apagaextintores.com.br/ajax/logout", function(response){
             response = JSON.parse(response);
             if(response.status == true){
                 location.reload();
@@ -48,7 +48,7 @@ $(".delete").on("click", function(){
            return;
         }
 
-        $.post("http://localhost/site-extintores/ajax/deleteEmail", {id: emaildId}, function(response){
+        $.post("https://apagaextintores.com.br/ajax/deleteEmail", {id: emaildId}, function(response){
             response = JSON.parse(response);
             const modalIcon = response.status == true ? "success" : "error";
 

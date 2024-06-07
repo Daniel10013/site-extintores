@@ -7,10 +7,6 @@ use App\Lib\Session\Session;
 $userController = new Users();
 $userController->redirectIfNotLoged();
 
-if (isset($_POST["logout"])) {
-    $userController->logOut();
-}
-
 $error = false;
 $exceptionMessage = "";
 try {
