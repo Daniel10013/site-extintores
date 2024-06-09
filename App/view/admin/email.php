@@ -4,7 +4,9 @@ use App\Controller\Email;
 use App\Controller\Users;
 use App\Lib\Url\UrlParser;
 
-redirectIfNotLoed();
+$userController = new Users();
+$userController->redirectIfNotLoged();
+
 redirectIfParameterIsInvalid();
 
 $emailData = getEmailData();
@@ -107,13 +109,9 @@ $email = $emailData["email"];
 </html>
 
 <?php 
-function redirectIfNotLoed(){
-    $userController = new Users();
-    $userController->redirectIfNotLoged();
-}
 
 function redirectIfParameterIsInvalid(){
-    $parameterIsValid = is_numeric(UrlParser::getUrlParameter(3)) || empty(UrlParser::getUrlParameter(3)) == false;
+    $parameterIsValid = is_numeric(UrlParser::getUrlParameter(2)) || empty(UrlParser::getUrlParameter(2)) == false;
     if($parameterIsValid == false){
         header("Location: " . BASE_URL . "admin");
     }
