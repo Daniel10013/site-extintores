@@ -119,7 +119,7 @@ function redirectIfParameterIsInvalid(){
 
 function getEmailData(){
     try{
-        $emailData = (new Email())->getEmailById(UrlParser::getUrlParameter(3));
+        $emailData = (new Email())->getEmailById(UrlParser::getUrlParameter(2));
         $error = $emailData["status"] == false ? true : false;
         if($error == false){
             return ["status" => $error, "message" => "", "email" => $emailData["email"][0]];
