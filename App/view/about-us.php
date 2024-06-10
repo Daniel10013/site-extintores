@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="<?= ASSETS_DIR ?>css/global.css">
     <link rel="stylesheet" href="<?= ASSETS_DIR ?>css/about-us.css">
     <title>Document</title>
@@ -25,6 +26,20 @@
             <img src="<?= ASSETS_DIR ?>img/whatsapp_logo.png" alt="Whatsapp Logo">
             <a href="#">31 99305-1820</a>
         </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <button class="close" id="closeButton">
+                <div><i class="fas fa-times"></i></div>
+            </button>
+            <ul class="list-mobile">
+                <li><a href="home">Home</a></li>
+                <li><a href="sobre-nos">Sobre Nós</a></li>
+                <li><a href="produtos">Produtos</a></li>
+                <li><a href="contato">Contato</a></li>
+            </ul>
+        </div>
+        <button class="hamburger" id="hamburgerButton">
+            <i class="fas fa-bars"></i>
+        </button>
     </header>
 
     <main>

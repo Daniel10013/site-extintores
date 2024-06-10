@@ -8,8 +8,8 @@ $result = "";
 if (isset($_POST["send-mail"])) {
     $contactController = new Email();
     $result = $contactController->sendEmail($_POST);
-    
-    if($result["status"] == true){
+
+    if ($result["status"] == true) {
         $_POST = [];
     }
 }
@@ -28,6 +28,7 @@ $message = isset($_POST["message"]) == false ? "" : $_POST["message"];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="<?= ASSETS_DIR ?>css/global.css">
     <link rel="stylesheet" href="<?= ASSETS_DIR ?>css/contact.css">
     <script src="https://kit.fontawesome.com/362ca63254.js" crossorigin="anonymous"></script>
@@ -49,6 +50,16 @@ $message = isset($_POST["message"]) == false ? "" : $_POST["message"];
             <img src="<?= ASSETS_DIR ?>img/whatsapp_logo.png" alt="Whatsapp Logo">
             <a href="#">31 99305-1820</a>
         </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <button class="close" id="closeButton"><i class="fas fa-times"></i></button>
+            <ul class="list-mobile">
+                <li><a href="home">Home</a></li>
+                <li><a href="sobre-nos">Sobre Nós</a></li>
+                <li><a href="produtos">Produtos</a></li>
+                <li><a href="contato">Contato</a></li>
+            </ul>
+        </div>
+        <button class="hamburger" id="hamburgerButton"><i class="fas fa-bars"></i></button>
     </header>
 
     <main>
@@ -57,10 +68,14 @@ $message = isset($_POST["message"]) == false ? "" : $_POST["message"];
             <div class="bannerlink">
                 <h1>Entre em contato com a gente!</h1>
                 <ul class="listcontact">
-                    <li><a href="#"><img src="<?= ASSETS_DIR?>img/telephoneIcon.png" alt="Icone" class="telephoneicon">31 9190-9947</a></li>
-                    <li><a href="#"><img src="<?= ASSETS_DIR?>img/whatsappIcon.png" alt="Icone" class="whatsicon">31 99305-1820</a></li>
-                    <li><a href="#"><img src="<?= ASSETS_DIR?>img/emailIcon.png" alt="Icone" class="emailicon">apagaextintoresbhz@gmail.com</a></li>
-                    <li><a href="#"><img src="<?= ASSETS_DIR?>img/emailIcon.png" alt="Icone" class="emailicon">apagasarzedo@gmail.com</a></li>
+                    <li><a href="#"><img src="<?= ASSETS_DIR ?>img/telephoneIcon.png" alt="Icone"
+                                class="telephoneicon">31 9190-9947</a></li>
+                    <li><a href="#"><img src="<?= ASSETS_DIR ?>img/whatsappIcon.png" alt="Icone" class="whatsicon">31
+                            99305-1820</a></li>
+                    <li><a href="#"><img src="<?= ASSETS_DIR ?>img/emailIcon.png" alt="Icone"
+                                class="emailicon">apagaextintoresbhz@gmail.com</a></li>
+                    <li><a href="#"><img src="<?= ASSETS_DIR ?>img/emailIcon.png" alt="Icone"
+                                class="emailicon">apagasarzedo@gmail.com</a></li>
                 </ul>
             </div>
         </div>
@@ -77,8 +92,10 @@ $message = isset($_POST["message"]) == false ? "" : $_POST["message"];
                         <input type="mail" name="email" placeholder="E-mail*" value="<?= $email ?>" style="width: 40%;">
                     </div>
                     <div class="second-line">
-                        <input type="text" name="subject" placeholder="Assunto*" value="<?= $subject ?>" style="width: 70%;">
-                        <input type="text" name="phone" placeholder="Telefone*" value="<?= $phone ?>" style="width: 30%;">
+                        <input type="text" name="subject" placeholder="Assunto*" value="<?= $subject ?>"
+                            style="width: 70%;">
+                        <input type="text" name="phone" placeholder="Telefone*" value="<?= $phone ?>"
+                            style="width: 30%;">
                     </div>
                     <textarea name="message" id="" placeholder="Mensagem*"><?= $message ?></textarea>
                     <div class="g-recaptcha" data-sitekey="<?= Recaptcha::getSiteKey() ?>">

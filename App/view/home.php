@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="<?= ASSETS_DIR ?>css/global.css">
     <link rel="stylesheet" href="<?= ASSETS_DIR ?>css/home.css">
-    <script src="<?= ASSETS_DIR?>js/main.js"></script>
+    <script src="<?= ASSETS_DIR?>js/main.js" defer></script>
     <title>Document</title>
 </head>
 
@@ -27,9 +27,7 @@
             <a href="#">31 99305-1820</a>
         </div>
         <div class="mobile-menu" id="mobileMenu">
-            <button class="close" id="closeButton">
-                 <i class="fas fa-times"></i>
-            </button>
+            <button class="close" id="closeButton"><i class="fas fa-times"></i></button>
             <ul class="list-mobile">
                 <li><a href="home">Home</a></li>
                 <li><a href="sobre-nos">Sobre Nós</a></li>
@@ -37,9 +35,7 @@
                 <li><a href="contato">Contato</a></li>
             </ul>
         </div>
-        <button class="hamburger" id="hamburgerButton">
-            <i class="fas fa-bars"></i>
-        </button>
+        <button class="hamburger" id="hamburgerButton"><i class="fas fa-bars"></i></button>
     </header>
 
     <main>
@@ -94,8 +90,8 @@
             <ul class="contactlink">
                 <li><a href="#">31 9190-9947</a></li>
                 <li><a href="#">31 99305-1820</a></li>
-                <li><a href="#">apagaextintoresbhz@gmail.com</a></li>
-                <li><a href="#">apagasarzedo@gmail.com</a></li>
+                <li><a href="mailto:apagaextintoresbhz@gmail.com" target="_blank">apagaextintoresbhz@gmail.com</a></li>
+                <li><a href="mailto:apagasarzedo@gmail.com" target="_blank">apagasarzedo@gmail.com</a></li>
             </ul>
         </div>
         <div class="copyright">

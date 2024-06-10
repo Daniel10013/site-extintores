@@ -68,6 +68,38 @@ main{
     }
 }
 
+@media only screen and (max-width: 1200px){
+    main{
+        & .product img{
+            height: 80%;
+            width: 50%;
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    main{
+        & .product{
+            display: flex;
+            flex-direction: column;
+        }
+
+        & .product img{
+            padding: 3px;
+            height: 60%;
+            width: 70%;
+        }
+    }
+}
+
+@media only screen and (max-width: 655px){
+    main{
+        & .banner h1{
+            font-size: 40px;
+        }
+    }
+}
+
 @media only screen and (max-width: 600px) {
     main{
         & .banner h1{
@@ -93,7 +125,6 @@ main{
 
         & .product img{
             padding: 3px;
-            height: 200px;
             border-radius: 20px;
         }
 
@@ -104,4 +135,26 @@ main{
 
     }
 
+}
+
+@media only screen and (max-width: 458px){
+    main{
+        & .banner h1{
+            font-size: 25px;
+        }
+
+        & h1{
+            font-size: 25px;
+        }
+
+        & .product img{
+            height: 50%;
+            width: 60%;
+        }
+
+        & .product-details p{
+            font-size: 13px;
+            
+        }
+    }
 }

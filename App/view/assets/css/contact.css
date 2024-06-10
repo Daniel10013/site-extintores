@@ -1,14 +1,14 @@
-main{
+main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    & .banner{
+    & .banner {
         position: relative;
     }
 
-    & .bannerlink{
+    & .bannerlink {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -20,7 +20,7 @@ main{
         color: white;
     }
 
-    & .banner h1{
+    & .banner h1 {
         padding: 20px;
         font-size: 50px;
     }
@@ -38,29 +38,29 @@ main{
         color: white;
     }
 
-    & .listcontact img{
+    & .listcontact img {
         position: relative;
     }
 
-    & .telephoneicon{
+    & .telephoneicon {
         width: 15px;
         right: 5px;
         top: 1px;
     }
 
-    & .whatsicon{
+    & .whatsicon {
         width: 18px;
         right: 5px;
         top: 3px;
     }
 
-    & .emailicon{
+    & .emailicon {
         width: 18px;
         right: 5px;
         top: 5px;
-    }    
+    }
 
-    & .message{
+    & .message {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -68,7 +68,7 @@ main{
         width: 1050px;
     }
 
-    & .line{
+    & .line {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -76,38 +76,39 @@ main{
         width: 1050px;
     }
 
-    & .information{
+    & .information {
         display: flex;
         width: 1050px;
         gap: 5px;
     }
 
-    & .first-line{
+    & .first-line {
         display: flex;
         width: 1050px;
     }
 
-    & .second-line{
+    & .second-line {
         display: flex;
         width: 1050px;
     }
 
-    & .information input{
+    & .information input {
         border: solid 1px #A6A6A6;
         height: 40px;
         padding: 2px 5px;
         border-radius: 35px;
     }
 
-    & textarea{
-        border: solid 1px #A6A6A6;;
+    & textarea {
+        border: solid 1px #A6A6A6;
+        ;
         height: 150px;
         width: 1050px;
         border-radius: 20px;
         padding: 5px 10px;
     }
 
-    & .sendmessage{
+    & .sendmessage {
         cursor: pointer;
         font-size: 20px;
         width: 30%;
@@ -118,53 +119,206 @@ main{
     }
 }
 
-@media only screen and (max-width: 1200px){
-    
+@media only screen and (max-width: 1275px) {
+    main {
+        & .banner h1{
+            padding: 15px;
+        }
+    }
+
 }
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 1200px){
     main{
-
         & .banner h1{
-            font-size: 30px;
+            padding: 5px;
         }
+    }
+}
 
-        & ul{
-            display: none;
-        }
-
-        & .content{
+@media only screen and (max-width: 1050px){
+    main{
+        & .content {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
         }
 
-        & .information{
+        & .information {
             display: flex;
             flex-direction: column;
-            width: 550px;
+            width: 850px;
         }
 
-        & .first-line{
-            width: 550px;
+        & .first-line {
+            width: 850px;
         }
 
-        & .second-line{
-            width: 550px;
+        & .second-line {
+            width: 850px;
         }
 
-        & .line{
-            width: 550px;
+        & .line {
+            width: 850px;
         }
 
-        & textarea{
-            width: 550px;
+        & textarea {
+            width: 850px;
         }
 
-        & .sendmessage{
+        & .sendmessage {
+            font-size: 17px;
+            width: 35%;
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px){
+    main{
+        & .banner h1{
+            font-size: 40px;
+        }
+
+        & ul{
+            display: none;
+        }
+        
+    }
+}
+
+@media only screen and (max-width: 850px){
+    main{
+        & .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        & .information {
+            display: flex;
+            flex-direction: column;
+            width: 635px;
+        }
+
+        & .first-line {
+            width: 635px;
+        }
+
+        & .second-line {
+            width: 635px;
+        }
+
+        & .line {
+            width: 635px;
+        }
+
+        & textarea {
+            width: 635px;
+        }
+
+        & .sendmessage {
             font-size: 15px;
             width: 35%;
         }
+    }
+}
+
+@media only screen and (max-width: 635px){
+    main{
+        & .banner h1{
+            font-size: 35px;
+        }
+        & .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        & .information {
+            display: flex;
+            flex-direction: column;
+            width: 600px;
+        }
+
+        & .first-line {
+            width: 600px;
+        }
+
+        & .second-line {
+            width: 600px;
+        }
+
+        & .line {
+            width: 600px;
+        }
+
+        & textarea {
+            width: 600px;
+        }
+
+        & .sendmessage {
+            font-size: 16px;
+            width: 35%;
+        }
+
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    main {
+
+        & .banner h1 {
+            font-size: 30px;
+        }
+
+        & .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        & .information {
+            display: flex;
+            flex-direction: column;
+            width: 450px;
+        }
+
+        & .first-line {
+            width: 450px;
+        }
+
+        & .second-line {
+            width: 450px;
+        }
+
+        & .line {
+            width: 450px;
+        }
+
+        & textarea {
+            width: 450px;
+        }
+
+        & .sendmessage {
+            font-size: 14px;
+            width: 35%;
+        }
+    }
+}
+
+@media only screen and (max-width: 479px){
+    main{
+        & .banner h1{
+            font-size: 20px;
+        }
+    }
+
+    & .sendmessage {
+        font-size: 13px;
+        width: 35%;
     }
 }
