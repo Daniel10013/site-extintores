@@ -140,6 +140,17 @@ main{
             justify-content: center;
             align-items: center;
         }
+
+        & .cards {
+            height: 255px;
+            width: 275px;
+            text-align: center;
+        }
+
+        & .cards img {
+            height: 235px;
+            width: 100%;
+        }
     }    
 }
 
@@ -148,17 +159,5 @@ main{
         & .banner h1{
             font-size: 20px;
         }
-
-        & .cards {
-            height: 185px;
-            width: 150px;
-            text-align: center;
-        }
-
-        & .cards img {
-            height: 145px;
-            width: 100%;
-        }
-
     }
 }

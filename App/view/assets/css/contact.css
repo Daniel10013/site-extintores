@@ -87,6 +87,22 @@ main {
         width: 1050px;
     }
 
+    & #name {
+        width: 60%;
+    }
+
+    & #email {
+        width: 40%;
+    }
+
+    & #subject {
+        width: 70%;
+    }
+
+    & #phone {
+        width: 30%;
+    }
+
     & .second-line {
         display: flex;
         width: 1050px;
@@ -121,23 +137,23 @@ main {
 
 @media only screen and (max-width: 1275px) {
     main {
-        & .banner h1{
+        & .banner h1 {
             padding: 15px;
         }
     }
 
 }
 
-@media only screen and (max-width: 1200px){
-    main{
-        & .banner h1{
+@media only screen and (max-width: 1200px) {
+    main {
+        & .banner h1 {
             padding: 5px;
         }
     }
 }
 
-@media only screen and (max-width: 1050px){
-    main{
+@media only screen and (max-width: 1050px) {
+    main {
         & .content {
             display: flex;
             flex-direction: column;
@@ -174,21 +190,21 @@ main {
     }
 }
 
-@media only screen and (max-width: 1024px){
-    main{
-        & .banner h1{
+@media only screen and (max-width: 1024px) {
+    main {
+        & .banner h1 {
             font-size: 40px;
         }
 
-        & ul{
+        & ul {
             display: none;
         }
-        
+
     }
 }
 
-@media only screen and (max-width: 850px){
-    main{
+@media only screen and (max-width: 850px) {
+    main {
         & .content {
             display: flex;
             flex-direction: column;
@@ -225,11 +241,12 @@ main {
     }
 }
 
-@media only screen and (max-width: 635px){
-    main{
-        & .banner h1{
+@media only screen and (max-width: 635px) {
+    main {
+        & .banner h1 {
             font-size: 35px;
         }
+
         & .content {
             display: flex;
             flex-direction: column;
@@ -310,15 +327,69 @@ main {
     }
 }
 
-@media only screen and (max-width: 479px){
-    main{
-        & .banner h1{
+@media only screen and (max-width: 479px) {
+    main {
+        & .banner h1 {
             font-size: 20px;
         }
-    }
 
-    & .sendmessage {
-        font-size: 13px;
-        width: 35%;
+        & .sendmessage {
+            font-size: 13px;
+            width: 35%;
+        }
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    main {
+        & .banner h1{
+            font-size: 18px;
+        }
+
+        & .information {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+        }
+
+        & .first-line {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+        }
+
+        & #name{
+            width: 300px;
+        }
+
+        & #email{
+            width: 300px;
+        }
+
+        & .second-line {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+        }
+
+        & #subject{
+            width: 300px;
+        }
+
+        & #phone{
+            width: 300px;
+        }
+
+        & .line {
+            width: 300px;
+        }
+
+        & textarea {
+            width: 300px;
+        }
+        & .sendmessage {
+            font-size: 12px;
+            width: 50%;
+        }
     }
 }

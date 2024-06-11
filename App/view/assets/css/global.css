@@ -307,11 +307,19 @@ footer {
         align-items: center;
 
         & .bar {
-            width: 300px;
+            width: 400px;
         }
 
         & .contactlink li {
             display: none;
+        }
+    }
+}
+
+@media only screen and (max-width: 425px){
+    footer{
+        & .copyright{
+            height: 350px;
         }
     }
 }

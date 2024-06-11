@@ -24,7 +24,7 @@
         </div>
         <div class="whatsapp">
             <img src="<?= ASSETS_DIR ?>img/whatsapp_logo.png" alt="Whatsapp Logo">
-            <a href="#">31 99305-1820</a>
+            <a href="https://wa.me/31993051820" target="_blank">31 99305-1820</a>
         </div>
         <div class="mobile-menu" id="mobileMenu">
             <button class="close" id="closeButton"><i class="fas fa-times"></i></button>
@@ -54,7 +54,7 @@
                         garantir a qualidade e a segurança das mangueiras utilizadas nos sistemas de combate a
                         incêndios.
                     </p>
-                    <a href="">Solicite seu orçamento!</a>
+                    <a href="contato">Solicite seu orçamento!</a>
                 </div>
             </div>
         </div>
@@ -64,10 +64,10 @@
         <div class="contactlist">
             <div class="logo"><img src="<?= ASSETS_DIR ?>img/logo.png" alt="Logo Apaga Extintores"></div>
             <ul class="contactlink">
-                <li><a href="#">31 9190-9947</a></li>
-                <li><a href="#">31 99305-1820</a></li>
-                <li><a href="#">apagaextintoresbhz@gmail.com</a></li>
-                <li><a href="#">apagasarzedo@gmail.com</a></li>
+                <li><a href="https://wa.me/3191909947" target="_blank">31 9190-9947</a></li>
+                <li><a href="https://wa.me/31993051820" target="_blank">31 99305-1820</a></li>
+                <li><a href="mailto:apagaextintoresbhz@gmail.com" target="_blank">apagaextintoresbhz@gmail.com</a></li>
+                <li><a href="mailto:apagasarzedo@gmail.com" target="_blank">apagasarzedo@gmail.com</a></li>
             </ul>
         </div>
         <div class="copyright">

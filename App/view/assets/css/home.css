@@ -175,7 +175,12 @@ main {
 
 @media only screen and (max-width: 600px) {
     main {
+        
         & .text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             width: 90%;
         }
 
@@ -184,10 +189,8 @@ main {
         }
 
         & .text a{
-            border-radius: 35px;
             height: 35px;
             width: 100%;
-            padding: 1px 10px 1px 10px;
         }
 
         & .banneraboutus{
@@ -214,10 +217,8 @@ main {
         }
 
         & .button a {
-            border-radius: 35px;
             height: 35px;
             width: 80%;
-            padding: 1px 10px 1px 10px;
         }
     }
 }
@@ -227,5 +228,89 @@ main {
         & .button a {
             width: 70%;
         } 
+    }
+}
+
+@media only screen and (max-width: 475px){
+    main{
+        & .information{
+            height: 405px;
+        }
+
+        & .text{
+            height: 370px;
+            width: 320px;
+        }
+
+        & .text p{
+            font-size: 12px;
+            height: 150px;
+        }
+
+        & .text a{
+            font-size: 11px;
+        }
+
+        & .allproducts{
+            height: 935px;
+        }
+
+        & .productslist{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        & .card{
+            height: 225px;
+            width: 300px;
+        }
+
+        & .card img{
+            height: 205px;
+            width: 300px;
+        }
+
+        & .button a {
+            font-size: 11px;
+            width: 95%;
+        }
+    }
+}
+
+@media only screen and (max-width: 385px){
+    main{
+        & .text a{
+            text-align: center;
+        }
+    }
+}
+
+@media only screen and (max-width: 365px){
+    main{
+        & .information{
+            height: 455px;
+        }
+
+        & .text{
+            height: 425px;
+            width: 320px;
+        }
+
+        & .text p{
+            height: 175px;
+            font-size: 11px;
+        }
+
+        & .card{
+            height: 225px;
+            width: 265px;
+        }
+
+        & .card img{
+            height: 205px;
+            width: 265px;
+        }
     }
 }
