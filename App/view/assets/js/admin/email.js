@@ -14,20 +14,21 @@ $(".logout").on("click", function(){
         }
 
         $.get("https://apagaextintores.com.br/ajax/logout", function(response){
+            
             response = JSON.parse(response);
-            if(response.status == true){
-                location.reload();
+            if(response.status == false){
+                Swal.fire({
+                    title: "Erro ao realizar Logout",
+                    text: response.message,
+                    icon: "error",
+                    showCloseButton: true,
+                    showConfirmButton: false,
+                    showCancelButton: true,
+                    cancelButtonText: "Fechar"
+                })
             }
 
-            Swal.fire({
-                title: "Erro ao realizar Logout",
-                text: response.message,
-                icon: "error",
-                showCloseButton: true,
-                showConfirmButton: false,
-                showCancelButton: true,
-                cancelButtonText: "Fechar"
-            })
+            location.reload(); 
         })
     })
 })
