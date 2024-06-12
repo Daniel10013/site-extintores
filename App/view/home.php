@@ -5,16 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="shortcut icon" href="<?= ASSETS_DIR ?>img/favicon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="<?= ASSETS_DIR ?>css/global.css">
     <link rel="stylesheet" href="<?= ASSETS_DIR ?>css/home.css">
     <script src="<?= ASSETS_DIR?>js/main.js" defer></script>
-    <title>Document</title>
+    <title>Apaga Extintores</title>
 </head>
 
 <body>
     <header>
         <div class="logolist">
-            <div class="logo"><img src="<?= ASSETS_DIR ?>img/logo.png" alt="Logo Apaga Extintores"></div>
+            <div class="logo"><a href="<?= BASE_URL ?>"><img src="<?= ASSETS_DIR ?>img/logo.png" alt="Logo Apaga Extintores"></a></div>
             <ul class="listlink">
                 <li><a href="home">Home</a></li>
                 <li><a href="sobre-nos">Sobre Nós</a></li>
@@ -111,6 +112,7 @@
             </p>
         </div>
     </footer>
+    <script src="<?= ASSETS_DIR ?>js/jquery/jquery-3.7.1.min.js"></script>
 
 </body>
 

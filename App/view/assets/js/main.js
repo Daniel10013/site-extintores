@@ -1,12 +1,7 @@
-const hamburgerButton = document.querySelector("#hamburgerButton");
-const closeButton = document.querySelector("#closeButton");
+$("#hamburgerButton").on("click", function(){
+    $("#mobileMenu").css({"display": "flex"})
+})
 
-const mobileMenu = document.querySelector("#mobileMenu");
-
-hamburgerButton.addEventListener("click", function(){
-    mobileMenu.classList.add("flex");
-});
-
-closeButton.addEventListener("click", function(){
-    mobileMenu.classList.remove("none");
-});
+$("#closeButton").on("click", function(){
+    $("#mobileMenu").css({"display": "none"})
+})

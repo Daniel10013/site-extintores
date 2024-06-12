@@ -1,0 +1,52 @@
+header{
+    border-bottom: solid 1px rgba(66, 66, 66, 0.253) !important;
+}
+
+main{
+    width: 100%;
+    color: rgb(185, 34, 34);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    & .banner{
+        position: relative;
+    }
+
+    & .banner h1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        color: white;
+        font-size: 50px;
+    }
+
+    & .page-content{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 450px;
+
+        & a{
+            color: rgb(180, 50, 50);
+            text-decoration: underline;
+            transition: 0.2s;
+        }
+
+        & a:hover{
+            color: black;
+        }
+    }
+}
+
+footer{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}

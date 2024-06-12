@@ -25,14 +25,14 @@ main {
         flex-direction: column;
         margin: 25px;
         height: 70%;
-        width: 50%;
-
+        gap: 5px;
+        width: 55%;
     }
 
     & .text p {
+        font-size: 20px ;
         height: 125px;
         padding: 5px;
-        gap: 10px;
         color: #343434;
         text-align: justify;
     }
@@ -91,6 +91,8 @@ main {
         height: 315px;
         width: 300px;
         border-radius: 15px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
     }
 
     & .card a {
@@ -120,11 +122,31 @@ main {
     }
 }
 
-@media only screen and (max-width: 1280px){
-    
+@media screen and (max-width: 1412px){
+    main{
+        & .text{
+            gap: 10px;
+        }
+
+        & .text p{
+            font-size: 18px;
+        }
+    }
 }
 
-@media only screen and (max-width: 1145px) {
+@media screen and (max-width: 1285px){
+    main{
+        & .text{
+            gap: 10px;
+        }
+
+        & .text p{
+            font-size: 16px;
+        }
+    }
+}
+
+@media only screen and (max-width: 1155px) {
     main{
         & .text{
             font-size: 14px;
@@ -136,7 +158,7 @@ main {
     }
 }
 
-@media only screen and (max-width: 970px){
+@media only screen and (max-width: 1086px){
     main{
         & .text{
             width: 70%;
@@ -169,6 +191,30 @@ main {
             height: 35px;
             width: 60%;
             padding: 1px 10px 1px 10px;
+        }
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    main {
+        
+        & .text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            padding: 2px;
+            width: 100%;
+        }
+
+        & .text p{
+            font-size: 16px;
+        }
+
+        & .text a{
+            height: 35px;
+            width: 100%;
         }
     }
 }
@@ -235,20 +281,22 @@ main {
     main{
         & .information{
             height: 405px;
+            padding: 0;
         }
 
         & .text{
             height: 370px;
-            width: 320px;
+            width: 100%;
         }
 
         & .text p{
-            font-size: 12px;
+            width: 100%;
+            font-size: 14px;
             height: 150px;
         }
 
         & .text a{
-            font-size: 11px;
+            font-size: 14px;
         }
 
         & .allproducts{

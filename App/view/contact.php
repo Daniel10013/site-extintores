@@ -30,6 +30,7 @@ $message = isset($_POST["message"]) == false ? "" : $_POST["message"];
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="<?= ASSETS_DIR ?>css/global.css">
+    <link rel="shortcut icon" href="<?= ASSETS_DIR ?>img/favicon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="<?= ASSETS_DIR ?>css/contact.css">
     <script src="https://kit.fontawesome.com/362ca63254.js" crossorigin="anonymous"></script>
     <title>Contato</title>
@@ -151,6 +152,8 @@ $message = isset($_POST["message"]) == false ? "" : $_POST["message"];
         </div>
     </footer>
 
+    <script src="<?= ASSETS_DIR?>js/main.js" defer></script>
+    <script src="<?= ASSETS_DIR ?>js/jquery/jquery-3.7.1.min.js"></script>
 </body>
 
 </html>

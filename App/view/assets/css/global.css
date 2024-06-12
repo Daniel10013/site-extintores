@@ -118,6 +118,7 @@ header {
 }
 
 footer {
+    padding-bottom: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -319,7 +320,20 @@ footer {
 @media only screen and (max-width: 425px){
     footer{
         & .copyright{
+            margin-top: 15px;
             height: 350px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        & .bar{
+            width: 95%;
+        }
+
+        & .copyright ul{
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
         }
     }
 }
@@ -340,9 +354,6 @@ footer {
             visibility: hidden;
         }
 
-        & .bar{
-            width: 300px;
-        }
 
         & .listlink li{
             gap: -5px;
