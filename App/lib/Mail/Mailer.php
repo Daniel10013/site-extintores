@@ -59,10 +59,8 @@ class Mailer{
 
             //Recipients
             $mail->setFrom('contato@apagaextintores.com.br', 'E-mails Apaga Extintores');
-            $mail->addAddress('daniel.filipesoarescv@gmail.com', $this->senderName);
+            $mail->addAddress($this->mail, $this->senderName);
             $mail->addReplyTo($this->from);
-            // $mail->addCC('cc@example.com');
-            // $mail->addBCC('bcc@example.com');
 
             //Content
             $mail->isHTML(true);

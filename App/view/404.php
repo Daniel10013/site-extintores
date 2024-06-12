@@ -38,7 +38,7 @@
     <main>
         <div class="banner">
             <img src="<?= ASSETS_DIR ?>img/banner.png" alt="Banner" style="width: 100%;">
-            <h1>Erro 404 - Página não encontrada</h1>
+            <h1>404 - Página não encontrada</h1>
         </div>
         <div class="page-content">
             <h1>Oops! Parece que a página solicitada não existe!</h1>

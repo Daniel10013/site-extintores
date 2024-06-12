@@ -50,3 +50,44 @@ footer{
     width: 100%;
     bottom: 0;
 }
+
+@media screen and (max-width: 865px){
+    main{
+        & .banner h1{
+            font-size: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 650px){
+    main{
+        & .banner img{
+            height: 150px;
+        }
+
+        & .banner h1{
+            width: 100%;
+            font-size: 22px;
+            text-align: center;
+        }
+        
+        & .page-content{
+
+            & h1{
+                width: 100%;
+                text-align: center;
+                font-size: 22px;
+            }
+    
+            & a{
+                color: rgb(180, 50, 50);
+                text-decoration: underline;
+                transition: 0.2s;
+            }
+    
+            & a:hover{
+                color: black;
+            }
+        }
+    }
+}

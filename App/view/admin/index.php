@@ -56,17 +56,6 @@ try {
             </div>
             <div class="table-body">
                 <?php
-                if (empty($emailsData) == true || $error == true) {
-                ?>
-                    <div class="nothing-here">
-                        <?php
-                        $messageToShow = $message != "" ? $exceptionMessage : "Nenhum e-mail encontrado :(";
-                        ?>
-                        <h1></h1>
-                    </div>
-                <?php
-                }
-
                 if (empty($emailsData) == false && $error == false) {
                     foreach ($emailsData as $emailData) {
                         $detailsUrl = BASE_URL . "admin/detalhes-email/{$emailData["id"]}";
@@ -87,6 +76,15 @@ try {
                                 </div>
                             TABLE_ROW;
                     }
+                } else{
+                    ?>
+                        <div class="nothing-here">
+                            <?php
+                            $messageToShow = $exceptionMessage != "" ? $exceptionMessage : "Nenhum e-mail encontrado :(";
+                            ?>
+                            <h1><?= $messageToShow ?></h1>
+                        </div>
+                    <?php
                 }
                 ?>
             </div>
@@ -98,17 +96,6 @@ try {
             </div>
             <div class="table-body">
                 <?php
-                if (empty($emailsData) == true || $error == true) {
-                ?>
-                    <div class="nothing-here">
-                        <?php
-                        $messageToShow = $message != "" ? $exceptionMessage : "Nenhum e-mail encontrado :(";
-                        ?>
-                        <h1></h1>
-                    </div>
-                <?php
-                }
-
                 if (empty($emailsData) == false && $error == false) {
 
                     foreach ($emailsData as $emailData) {
@@ -143,6 +130,15 @@ try {
                                 </div>
                             TABLE_ROW;
                     }
+                } else{
+                    ?>
+                        <div class="nothing-here">
+                            <?php
+                            $messageToShow = $exceptionMessage != "" ? $exceptionMessage : "Nenhum e-mail encontrado :(";
+                            ?>
+                            <h1><?= $messageToShow ?></h1>
+                        </div>
+                    <?php
                 }
                 ?>
             </div>
