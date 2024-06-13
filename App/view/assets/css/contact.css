@@ -8,6 +8,10 @@ main {
         position: relative;
     }
 
+    & .content{
+        width: 100% !important;
+    }
+
     & .bannerlink {
         display: flex;
         flex-direction: column;
@@ -65,7 +69,7 @@ main {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 1050px;
+        width: 100%;
     }
 
     & .line {
@@ -78,7 +82,9 @@ main {
 
     & .information {
         display: flex;
-        width: 1050px;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
         gap: 5px;
     }
 
@@ -133,6 +139,12 @@ main {
         color: white;
         background-color: #AC0202;
     }
+}
+
+footer{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
 }
 
 @media only screen and (max-width: 1275px) {
