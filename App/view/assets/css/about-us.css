@@ -43,7 +43,7 @@ main{
     & .text p{
         margin: 10px;
         width: 1250px;
-        text-align: center;
+        text-align: justify;
         color: #2F2F2F;
     }
 
